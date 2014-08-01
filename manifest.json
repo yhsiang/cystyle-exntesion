@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "正元體轉換器",
-  "description": "幫你將正元體轉成一般體",
-  "version": "1.0.0.0",
+  "name": "祭止兀易讀器",
+  "description": "逗號跟句號都回來了～",
+  "version": "1.0.0.1",
 
   // "browser_action": {
   //   "default_icon": "icon.png",
