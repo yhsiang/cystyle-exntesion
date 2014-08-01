@@ -3,7 +3,7 @@
 
   "name": "祭止兀易讀器",
   "description": "逗號跟句號都回來了～",
-  "version": "1.0.0.1",
+  "version": "1.0.0.2",
 
   // "browser_action": {
   //   "default_icon": "icon.png",
@@ -21,8 +21,8 @@
   "content_scripts" : [
     {
       "matches": [
-        "http://www.facebook.com/*",
-        "https://www.facebook.com/*"
+        "http://www.facebook.com/tsaichengyuan",
+        "https://www.facebook.com/tsaichengyuan"
       ],
       "js": [
         "jquery-1.11.1.min.js",
