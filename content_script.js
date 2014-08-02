@@ -2,6 +2,9 @@
 (function(){
   var convertFbContent, registerObserver, main;
   convertFbContent = function(){
+    if (window.location.pathname.indexOf('tsaichengyuan') === -1) {
+      return;
+    }
     return $('.userContentWrapper').each(function(idx, wrapper){
       var link, moreText, userContent, innerDiv, ref$;
       if (!$(wrapper).hasClass('normalized')) {

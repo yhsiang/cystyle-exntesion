@@ -1,5 +1,5 @@
 convert-fb-content = ->
-  #$ baseNode
+  return if window.location.pathname.indexOf('tsaichengyuan') is -1
   $ '.userContentWrapper'
     .each (idx, wrapper) ->
       unless $ wrapper .hasClass 'normalized'
