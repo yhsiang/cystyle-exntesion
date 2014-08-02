@@ -46,6 +46,11 @@ registerObserver = ->
 main = ->
   target = document.getElementById 'contentArea' or document.getElementById 'content'
   return console.error '止兀表示: 臉書有問題啦！(╯-_-)╯ ~╩╩ ' unless target
-  convert-fb-content target
-  registerObserver!
+  if window.location.pathname.indexOf('tsaichengyuan') is -1
+    $ '.uiTextareaAutogrow' .on 'change', -> $ it.target .convertToCY!
+    $ document .on 'change', '.uiTextareaAutogrow', -> $ it.target .convertToCY!
+  else
+    convert-fb-content target
+    registerObserver!
+
 main!

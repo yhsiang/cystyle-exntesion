@@ -67,8 +67,17 @@
     if (!target) {
       return console.error('止兀表示: 臉書有問題啦！(╯-_-)╯ ~╩╩ ');
     }
-    convertFbContent(target);
-    return registerObserver();
+    if (window.location.pathname.indexOf('tsaichengyuan') === -1) {
+      $('.uiTextareaAutogrow').on('change', function(it){
+        return $(it.target).convertToCY();
+      });
+      return $(document).on('change', '.uiTextareaAutogrow', function(it){
+        return $(it.target).convertToCY();
+      });
+    } else {
+      convertFbContent(target);
+      return registerObserver();
+    }
   };
   main();
 }).call(this);
